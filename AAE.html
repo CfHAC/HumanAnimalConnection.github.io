@@ -35,6 +35,108 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            display: none;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .nav-tabs {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: left;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-tabs li {
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+
+        .nav-tabs li.active {
+            color: #ffffff;
+            background-color: #CAB88A;
+        }
+
+         .gallery {
+            --s: 150px; /* control the size */
+            --g: 10px;  /* control the gap */
+            display: grid;
+            margin: calc(var(--s) + var(--g));
+        }
+
+        .gallery > img {
+            grid-area: 1/1;
+            width: var(--s);
+            aspect-ratio: 1.15;
+            object-fit: cover;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+            transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+            cursor: pointer;
+            filter: grayscale(80%);
+            transition: .2s linear;
+          }
+        .gallery > img:hover {
+          filter: grayscale(0);
+          z-index: 1;
+          --_t: 1.2;
+        }
+
+        .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+        .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+        .gallery > img:nth-child(3),
+        .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+        .gallery > img:nth-child(4),
+        .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+        .gallery > img:nth-child(3),
+        .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+        .gallery > img:nth-child(5), 
+        .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+    </style>
 </head>
 
 <body>
@@ -83,7 +185,19 @@
       <div class="page-header d-flex align-items-center" style="background-image: url('');">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-5 text-center">
+              <div class="gallery">
+                <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+                <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+                <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+                <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+                <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+                <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+                <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+              </div>
+            </div>
+            <div class="col-lg-6 text-left">
+              <br><br><br><br><br>
               <h2>Animal Assisted Education (AAE)</h2>
               <p>an innovative approach that integrates animals into educational settings to enhance learning experiences and promote personal development.</p>
             </div>
@@ -104,7 +218,7 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container" data-aos="fade-up">
 
-        <div class="position-relative h-100">
+        <!-- <div class="position-relative h-100">
           <div class="slides-1 portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
@@ -130,59 +244,71 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
 
+        </div> -->
+
+  <div class="row justify-content-between gy-4 mt-4">
+    <div class="col-lg-8">
+      <div class="portfolio-description">
+        <ul class="nav-tabs">
+          <li class="tab active" data-target="section1">About AAE</li>
+          <li class="tab" data-target="section2">Benefits</li>
+          <li class="tab" data-target="section3">Program Includes</li>
+        </ul>
+
+        <div class="section active" id="section1">
+          <h2>Animal Assisted Education (AAE)</h2>
+          <p>AAE is an innovative approach that integrates animals into educational settings to enhance learning experiences and promote personal development. Through meaningful interactions with trained animals, AAE aims to create engaging and impactful educational experiences for learners of all ages. This program harnesses the unique bond between humans and animals to foster curiosity, empathy, and a deeper understanding of the natural world.</p>
         </div>
+    
+        <div class="section" id="section2">
+          <h2>Benefits of Animal Assisted Education</h2>
+              <div class="benefit">
+                <i class="fas fa-book"></i>
+                <p>Enhances Learning: Animal interactions in educational settings stimulate curiosity and engagement, resulting in enhanced learning outcomes. Animals serve as living examples that can bring complex concepts to life, making lessons more memorable and relatable.</p>
+              </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
+              <div class="benefit">
+                <i class="fas fa-heart"></i>
+                <p>Promotes Empathy and Compassion: Interacting with animals cultivates empathy and compassion in learners. Understanding and caring for animals can help foster a sense of responsibility and kindness towards all living beings.</p>
+              </div>
 
-          <div class="col-lg-8">
-            <div class="portfolio-description">
-              <h2>Introduction</h2>
-              <p>
-                Animal Assisted Education (AAE) is an innovative approach that integrates animals into educational settings to enhance learning experiences and promote personal development. Through meaningful interactions with trained animals, AAE aims to create engaging and impactful educational experiences for learners of all ages. This program harnesses the unique bond between humans and animals to foster curiosity, empathy, and a deeper understanding of the natural world. 
-              </p>
-              <h2>Benefits of Animal Assisted Education</h2>
-              <p>
-                Enhances Learning:<br> Animal interactions in educational settings stimulate curiosity and engagement, resulting in enhanced learning outcomes. Animals serve as living examples that can bring complex concepts to life, making lessons more memorable and relatable.
-              </p>
-              <p>
-                Promotes Empathy and Compassion:<br> Interacting with animals cultivates empathy and compassion in learners. Understanding and caring for animals can help foster a sense of responsibility and kindness towards all living beings.
-              </p>
-              <p>
-                Improves Emotional Well-being:<br> Animals have a calming effect and can reduce stress and anxiety levels among learners. Their presence in educational settings creates a positive and supportive atmosphere, contributing to improved emotional well-being.
-              </p>
-              <p>
-                Encourages Social Skills:<br> Animal-assisted activities provide opportunities for social interaction and cooperation. Working together with peers and animals in group settings promotes communication, teamwork, and the development of social skills.
-              </p>
-              <p>
-                Enhances Self-confidence:<br> The non-judgmental nature of animals boosts learners' self-confidence and self-esteem. Positive interactions with animals can encourage self-expression and personal growth.
-              </p>
-              <p>
-                Fosters Responsibility and Respect:<br> Caring for animals requires responsibility and respect. Engaging in AAE programs instills values of responsibility, nurturing, and ethical treatment of animals, promoting a sense of stewardship for the natural world.
-              </p>
-              <p>
-                Supports Cognitive Development:<br> Animal interactions can stimulate critical thinking, problem-solving, and observation skills. Learners are encouraged to make connections, analyze behaviors, and apply knowledge in practical ways.
-              </p>
-              <p>
-                Promotes Physical Activity:<br> Some AAE programs involve physical activities, such as grooming or exercising animals. These activities promote physical movement and can contribute to a healthier lifestyle.
-              </p>
-              <p>
-                Encourages Environmental Awareness:<br> AAE programs raise awareness about the interconnectedness of humans, animals, and the environment. Learners develop a deeper understanding of the natural world and the importance of conservation.
-              </p>
-              <br>
-              <h2>Our Animal Assisted Education Program</h2><br>
-              <p>Interactive Sessions:<br> Engaging and interactive sessions where learners have hands-on experiences with trained animals, facilitating direct learning and meaningful connections.</p>
-              <p>Customized Curriculum:<br> Tailored educational content that aligns with curriculum objectives and specific learning outcomes, ensuring relevance and academic integration.</p>
-              <p>Animal Care and Welfare Education:<br> Comprehensive education on animal care, behavior, and welfare, promoting responsible pet ownership and ethical treatment of animals.</p>
-              <p>Experiential Learning Activities:<br> Hands-on activities that encourage problem-solving, critical thinking, and collaboration, all while fostering connections with animals.</p>
-              <p>Reflection and Discussion:<br> Opportunities for reflection and group discussions to deepen the understanding of the human-animal bond and its impact on education and personal development.</p>
-              <p>Educator Training and Support:<br> Professional development opportunities and ongoing support for educators to effectively incorporate AAE into their teaching practices.
-              </p>
-              <br>
+              <div class="benefit">
+                <i class="fas fa-smile"></i>
+                <p>Improves Emotional Well-being: Animals have a calming effect and can reduce stress and anxiety levels among learners. Their presence in educational settings creates a positive and supportive atmosphere, contributing to improved emotional well-being.</p>
+              </div>
+                <div class="benefit">
+                    <i class="fas fa-users"></i>
+                    <p>Encourages Social Skills: Animal-assisted activities provide opportunities for social interaction and cooperation. Working together with peers and animals in group settings promotes communication, teamwork, and the development of social skills.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Enhances Self-confidence: The non-judgmental nature of animals boosts learners' self-confidence and self-esteem. Positive interactions with animals can encourage self-expression and personal growth.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-tree"></i>
+                    <p>Fosters Responsibility and Respect: Caring for animals requires responsibility and respect. Engaging in AAE programs instills values of responsibility, nurturing, and ethical treatment of animals, promoting a sense of stewardship for the natural world.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-brain"></i>
+                    <p>Supports Cognitive Development: Animal interactions can stimulate critical thinking, problem-solving, and observation skills. Learners are encouraged to make connections, analyze behaviors, and apply knowledge in practical ways.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-running"></i>
+                    <p>Promotes Physical Activity: Some AAE programs involve physical activities, such as grooming or exercising animals. These activities promote physical movement and can contribute to a healthier lifestyle.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-globe"></i>
+                    <p>Encourages Environmental Awareness: AAE programs raise awareness about the interconnectedness of humans, animals, and the environment. Learners develop a deeper understanding of the natural world and the importance of conservation.</p>
+                </div>
+        </div>
+        <!-- Other benefits -->
 
-              <p><b>Experience the transformative power of Animal Assisted Education (AAE) and provide your learners with unique and enriching educational experiences. Contact us today to learn more about our program and how it can benefit your educational institution or organization.</b></p>
-
-            </div>
-          </div>
+        <div class="section" id="section3">
+        <h2>Our Animal Assisted Education Program Includes</h2>
+        <p>Experience the transformative power of Animal Assisted Education (AAE) and provide your learners with unique and enriching educational experiences. Contact us today to learn more about our program and how it can benefit your educational institution or organization.</p>
+        </div>
+      </div>
+    </div>
 
           <div class="col-lg-3">
             <div class="portfolio-info">
@@ -286,6 +412,42 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+            const sections = document.querySelectorAll('.section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const target = this.getAttribute('data-target');
+                    const currentSection = document.querySelector('.section.active');
+
+                    // Hide current section
+                    currentSection.style.opacity = 0;
+                    setTimeout(() => {
+                        currentSection.classList.remove('active');
+                        currentSection.style.display = 'none';
+
+                        // Show target section
+                        const targetSection = document.getElementById(target);
+                        targetSection.style.display = 'block';
+                        setTimeout(() => {
+                            targetSection.classList.add('active');
+                            targetSection.style.opacity = 1;
+                        }, 10);
+                    }, 300);
+
+                    // Update active tab
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 
