@@ -37,58 +37,106 @@
   ======================================================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-      body {
-          font-family: Arial, sans-serif;
-      }
+    body {
+        font-family: Arial, sans-serif;
+    }
 
-      .section {
-          margin-bottom: 30px;
-      }
+    .section {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-      h2 {
-          margin-top: 0;
-          color: #333;
-      }
+    .section.active {
+        display: block;
+        opacity: 1;
+    }
 
-      p {
-          line-height: 1.6;
-      }
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
 
-      .benefit {
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-      }
+    p {
+        line-height: 1.6;
+    }
 
-      .benefit i {
-          margin-right: 10px;
-          font-size: 20px;
-          color: #333;
-      }
+    .benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 
-      .contact-form {
-          margin-top: 30px;
-      }
+    .benefit i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #333;
+    }
 
-      .contact-form input,
-      .contact-form textarea {
-          display: block;
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-      }
+    .nav-tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        list-style-type: none;
+        padding: 0;
+    }
 
-      .contact-form button {
-          padding: 10px 20px;
-          background-color: #333;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
+    .nav-tabs li {
+        margin-right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s;
+    }
+
+    .nav-tabs li.active {
+        color: #ffffff;
+        background-color: #CAB88A;
+    }
+
+     .gallery {
+        --s: 150px; /* control the size */
+        --g: 10px;  /* control the gap */
+        display: grid;
+        margin: calc(var(--s) + var(--g));
+    }
+
+    .gallery > img {
+        grid-area: 1/1;
+        width: var(--s);
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+        transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: .2s linear;
       }
-  </style>
+    .gallery > img:hover {
+      filter: grayscale(0);
+      z-index: 1;
+      --_t: 1.2;
+    }
+
+    .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    .gallery > img:nth-child(4),
+    .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    .gallery > img:nth-child(5), 
+    .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+</style>
 </head>
 
 <body>
@@ -137,29 +185,40 @@
       <div class="page-header d-flex align-items-center" style="background-image: url('');">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center"> <h2> Animal Assisted Psychotherapy (AAP)</h2></div>
-            <center> <img src="./assets/img/aap.PNG" ></center>
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-5 text-center">
+              <div class="gallery">
+                <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+                <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+                <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+                <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+                <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+                <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+                <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+              </div>
+            </div>
+            <div class="col-lg-6 text-left">
+              <br><br><br><br><br>
+              <h2> Animal Assisted Psychotherapy (AAP)</h2>
               <p>A unique and effective form of therapy that harnesses the power of the human-animal connection to support individuals in their journey towards better mental and emotional well-being.</p>
             </div>
           </div>
         </div>
       </div>
-      <nav>
+      <!-- <nav>
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li> Animal Assisted Psychotherapy (AAP)</li>
           </ol>
         </div>
-      </nav>
+      </nav> -->
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container" data-aos="fade-up">
 
-        <div class="position-relative h-100">
+        <!-- <div class="position-relative h-100">
           <div class="slides-1 portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
@@ -185,23 +244,27 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
 
-        </div>
+        </div> -->
 
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8">
             <div class="portfolio-description">
-              <div class="section">
+              <ul class="nav-tabs">
+                <li class="tab active" data-target="section1">About AAP</li>
+                <li class="tab" data-target="section2">Benefits</li>
+              </ul>
+              <div class="section active" id="section1">
                 <h2>Animal Assisted Psychotherapy (AAP)</h2>
                 <p>AAP is psychotherapy sessions with the presence of animals to boost the effect of counseling and therapy sessions. The trained therapy animals provide non-judgmental support, allowing individuals to express their emotions, pent-up thoughts, and find solace in challenging times. Whether it's helping those with PTSD, autism spectrum disorder, ADHD, anxiety, or other mental health conditions, AAP offers a holistic approach that combines the benefits of animal companionship with a therapy framework to help clients achieve greater mental well-being.</p>
-            </div>
-        
-            <div class="section">
+                <br>
                 <h2>Our Commitment to Excellence</h2>
                 <p>At the Centre for Human-Animal Connection, we prioritize the welfare and safety of both our clients and our animal partners. Our licensed therapists have extensive training and experience in AAP, ensuring the highest quality of care. We follow ethical guidelines and best practices to ensure a responsible and professional approach to AAP.</p>
-            </div>
+           
+              </div>
+      
         
-            <div class="section">
+            <div class="section" id="section2">
                 <h2>How Does AAP Benefit Individuals?</h2>
                 <div class="benefit">
                     <i class="fas fa-heart"></i>
@@ -212,25 +275,14 @@
                     <p>Interactions with animals can improve overall mood, increase happiness, and provide a sense of comfort.</p>
                 </div>
                 <div class="benefit">
-                    <i class="fas fa-heartbeat"></i>
-                    <p>Research has shown that AAP can lower blood pressure and reduce anxiety, contributing to improved mental and emotional well-being.</p>
-                </div>
-            </div>
-        
-            <div class="section">
+                  <i class="fas fa-heartbeat"></i>
+                  <p>Research has shown that AAP can lower blood pressure and reduce anxiety, contributing to improved mental and emotional well-being.</p>
+              </div>
+
+              <br>
                 <h2>Who Can Benefit from AAP?</h2>
                 <p>AAP is beneficial for individuals facing various mental health conditions, including but not limited to post-traumatic stress disorder (PTSD), autism spectrum disorder (ASD), attention deficit hyperactivity disorder (ADHD), and anxiety. Our AAP sessions are tailored to address the unique needs of each client, providing them with a personalized therapeutic experience.</p>
-            </div>
-        
-            <div class="section">
-                <h2>Contact Us</h2>
-                <p>For more information about our services and how to get involved, please contact us using the form below:</p>
-                <form class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+
             </div>
 
             </div>
@@ -338,6 +390,42 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const target = this.getAttribute('data-target');
+                const currentSection = document.querySelector('.section.active');
+
+                // Hide current section
+                currentSection.style.opacity = 0;
+                setTimeout(() => {
+                    currentSection.classList.remove('active');
+                    currentSection.style.display = 'none';
+
+                    // Show target section
+                    const targetSection = document.getElementById(target);
+                    targetSection.style.display = 'block';
+                    setTimeout(() => {
+                        targetSection.classList.add('active');
+                        targetSection.style.opacity = 1;
+                    }, 10);
+                }, 300);
+
+                // Update active tab
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
 </body>
 

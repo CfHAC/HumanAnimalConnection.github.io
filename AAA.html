@@ -38,35 +38,106 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-      body {
-          font-family: Arial, sans-serif;
-      }
+    body {
+        font-family: Arial, sans-serif;
+    }
 
-      .section {
-          margin-bottom: 30px;
-      }
+    .section {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-      h2 {
-          margin-top: 0;
-          color: #333;
-      }
+    .section.active {
+        display: block;
+        opacity: 1;
+    }
 
-      p {
-          line-height: 1.6;
-      }
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
 
-      .benefit {
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-      }
+    p {
+        line-height: 1.6;
+    }
 
-      .benefit i {
-          margin-right: 10px;
-          font-size: 20px;
-          color: #333;
+    .benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .benefit i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .nav-tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-tabs li {
+        margin-right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s;
+    }
+
+    .nav-tabs li.active {
+        color: #ffffff;
+        background-color: #CAB88A;
+    }
+
+     .gallery {
+        --s: 150px; /* control the size */
+        --g: 10px;  /* control the gap */
+        display: grid;
+        margin: calc(var(--s) + var(--g));
+    }
+
+    .gallery > img {
+        grid-area: 1/1;
+        width: var(--s);
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+        transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: .2s linear;
       }
-  </style>
+    .gallery > img:hover {
+      filter: grayscale(0);
+      z-index: 1;
+      --_t: 1.2;
+    }
+
+    .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    .gallery > img:nth-child(4),
+    .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    .gallery > img:nth-child(5), 
+    .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+</style>
 </head>
 
 <body>
@@ -115,9 +186,20 @@
       <div class="page-header d-flex align-items-center" style="background-image: url('');">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center"><h2>Animal Assisted Activities (AAA) </h2></div>
-            <center> <img src="./assets/img/aaa.png" ></center>
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-5 text-center">
+              <div class="gallery">
+                <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+                <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+                <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+                <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+                <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+                <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+                <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+              </div>
+            </div>
+            <div class="col-lg-6 text-left">
+              <br><br><br><br><br>
+              <h2>Animal Assisted Activities (AAA) </h2>
               <p>A unique and effective approach to therapy by incorporating trained animals into therapeutic settings</p>
             </div>
           </div>
@@ -137,7 +219,7 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container" data-aos="fade-up">
 
-        <div class="position-relative h-100">
+        <!-- <div class="position-relative h-100">
           <div class="slides-1 portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
@@ -163,19 +245,27 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
 
-        </div>
+        </div> -->
 
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8">
             <div class="portfolio-description">
-              <div class="section">
+
+              <ul class="nav-tabs">
+                <li class="tab active" data-target="section1">About AAA</li>
+                <li class="tab" data-target="section2">Benefits</li>
+                <li class="tab" data-target="section3">Program Includes</li>
+                <li class="tab" data-target="section4">Contact Us</li>
+              </ul>
+
+              <div class="section active" id="section1">
                 <h2>About AAA</h2>
                 <p>Animal Assisted Activities (AAA) offer a unique and effective approach to improve our clients' well-being by getting them involved in activities with animals. These animals may include dogs, cats, guinea pigs, and more. Each animal has its own unique way of helping individuals, ensuring a tailored experience based on their specific needs.</p>
                 <p>The presence of animals in therapy provides valuable non-human companionship and support. Extensive research has shown that animals' non-judgmental nature allows individuals to express their emotions and thoughts freely. Animal-assisted activities create a safe environment where participants feel comfortable opening up and engaging in introspection. These programs can be implemented in a variety of settings, including hospitals, schools, therapy centers, offices, and nursing homes.</p>
             </div>
         
-            <div class="section">
+            <div class="section" id="section2">
                 <h2>Benefits of AAA</h2>
                 <div class="benefit">
                     <i class="fas fa-heart"></i>
@@ -203,25 +293,21 @@
                 </div>
             </div>
         
-            <div class="section">
+            <div class="section" id="section3">
                 <h2>Informal AAA (School Visits)</h2>
                 <p>Our informal AAA Institutional Visits with Animals offer a unique and engaging experience for various institutions, such as schools, hospitals, and community centers. These visits aim to provide joy, comfort, and companionship through casual interactions with trained animals. With no structured format, these visits allow participants to enjoy the presence of animals in a relaxed and informal setting, fostering positive emotions and connections.</p>
-            </div>
-        
-            <div class="section">
                 <h2>Play! + AAA</h2>
                 <p>Our Animal Assisted Activities (AAA) program with play aspects offers a unique and engaging experience that combines the therapeutic benefits of animal interactions with the power of play. Designed to promote joy, connection, and well-being, these sessions create a safe and interactive environment where individuals can engage in play-based activities with trained animals. Through playful interactions, participants can experience the positive impact of the human-animal bond on their emotional, social, and cognitive well-being.</p>
-            </div>
-        
-            <div class="section">
                 <h2>Reflective AAA (Name TBC) - didactic + AAA</h2>
                 <p>Animal Assisted Activities (AAA) with Didactic Classes is a unique program that combines the therapeutic benefits of animal interactions with didactic learning sessions. By integrating animal-assisted activities with educational components, this program offers a holistic approach to personal development and growth. Through meaningful interactions with trained animals and engaging didactic classes, participants gain valuable insights and skills in areas such as conflict resolution and understanding the five love languages.</p>
-            </div>
+              </div>
+      
         
-            <div class="section">
+            <div class="section" id="section4">
                 <h2>Contact Us</h2>
                 <p>Contact us today to learn more about our Animal Assisted Activities program and how it can benefit you or your organization. Together, let's harness the incredible potential of human-animal interaction to promote well-being, growth, and connection.</p>
             </div>
+
             </div>
           </div>
 
@@ -327,6 +413,41 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const target = this.getAttribute('data-target');
+                const currentSection = document.querySelector('.section.active');
+
+                // Hide current section
+                currentSection.style.opacity = 0;
+                setTimeout(() => {
+                    currentSection.classList.remove('active');
+                    currentSection.style.display = 'none';
+
+                    // Show target section
+                    const targetSection = document.getElementById(target);
+                    targetSection.style.display = 'block';
+                    setTimeout(() => {
+                        targetSection.classList.add('active');
+                        targetSection.style.opacity = 1;
+                    }, 10);
+                }, 300);
+
+                // Update active tab
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
 </body>
 
