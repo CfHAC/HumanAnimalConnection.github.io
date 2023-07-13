@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Risks and rules</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            display: none;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .nav-tabs {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: left;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-tabs li {
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+
+        .nav-tabs li.active {
+            color: #ffffff;
+            background-color: #CAB88A;
+        }
+
+         .gallery {
+            --s: 150px; /* control the size */
+            --g: 10px;  /* control the gap */
+            display: grid;
+            margin: calc(var(--s) + var(--g));
+        }
+
+        .gallery > img {
+            grid-area: 1/1;
+            width: var(--s);
+            aspect-ratio: 1.15;
+            object-fit: cover;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+            transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+            cursor: pointer;
+            filter: grayscale(80%);
+            transition: .2s linear;
+          }
+        .gallery > img:hover {
+          filter: grayscale(0);
+          z-index: 1;
+          --_t: 1.2;
+        }
+
+        .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+        .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+        .gallery > img:nth-child(3),
+        .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+        .gallery > img:nth-child(4),
+        .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+        .gallery > img:nth-child(3),
+        .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+        .gallery > img:nth-child(5), 
+        .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+    </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <a href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>CHAC<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 text-center">
+              <div class="gallery">
+                <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+                <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+                <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+                <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+                <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+                <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+                <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+              </div>
+            </div>
+            <div class="col-lg-6 text-left">
+              <br><br><br><br><br>
+              <h2>Possible risks and rules of AAI</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Risks and rules</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-between gy-4 mt-4">
+          <p>As the animals are a vital part of our team, we hope that all present are comfortable with their presence in sessions. Animals have subjective experiences, feelings, and triggers. As such, Centre for Human-Animal Connection (CHAC) LLP is responsible for their welfare. At times, their behaviour cannot always be predicted. Mitigatory efforts has been made to reduce harm to both humans and animals, with external program venues equipped with reasonable resources to prevent foreseeable incidents. In addition, stressors are minimised so as to reduce discomfort to the animals involved. Listed below are possible risks associated with animal interaction sessions. The next section includes some rules participants should abide by to reduce the aforementioned risks. This list is non-exhaustive.
+          </p>
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <ul class="nav-tabs">
+                <li class="tab active" data-target="section1">Risks</li>
+                <li class="tab" data-target="section2">Rules</li>
+              </ul>
+              <div class="section active" id="section1">
+                <ol>
+                  <div class="benefit">
+                    <li>There will be animals in program venues. If you or any participants have allergies to any animals, or their food (e.g. hay or grass), notify the point of contact (i.e. a representative of the organisation organising the session) in advance. CHAC cannot give out medication for allergies, as such, a gentle reminder that CHAC will not accept liability for allergic reactions that occur during the sessions.</li>
+                  </div>
+                  <div class="benefit">
+                    <li>Animals have their own natural defences. Despite the staff having mitigatory measures to prevent any injury, there is still a likelihood of injury from scratches or bites. CHAC does not accept liability for any injuries occurring during the sessions.</li>
+                  </div>  
+                  <div class="benefit">
+                  <li>For their own safety and dignity our animals are not declawed. While we routinely trim their claws, when playing it is possible to get scratched. This is especially true for cats.</li>
+                  </div>  
+                  <li>While all our animals have been screened by a veterinarian before commencing to work, animals do sometimes carry disease. Because participants’ contact is not prolonged, this risk is very small. CHAC does not accept liability for any infections in lieu of the sessions.</li>
+                </ol>
+              </div>
+
+              <div class="section" id="section2">
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>The animals have individual rights just as each client has rights. Therefore, the animal has the right to decide if and when they participate with others. (i.e initial plan may include that animal in the session, but if the animal displays adverse behaviour, the animal will never be forced to participate.)</p>
+                    </div>
+
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>The animals will have their own quiet space (ie. playpen) in the room where they can rest, sleep, or take a quiet break. The animals should not be disturbed when they are in this area.</p>
+                    </div>
+
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>The animals are always treated gently. They should never be mishandled or mistreated, which includes but not limited to being hit, tails or any other parts pulled, carried or treated in any other way that is uncomfortable to them. CHAC reserves the right to remove any participant who infringes on the animal’s welfare.</p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>If, at any time, the animal shows signs of distress, irritation, fear, anxiety, or in any way acts in a negative manner, they are removed from the situation/activity. No individual, except the educator or handler, should touch or interact with the animal during these times. The educator or handler will assess and determine whether it is possible for the animal to return to the session.</p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>Animals will only be carried by the educator or handler (unless specifically stated otherwise in the program outline). No one is allowed to interact with the animal without supervision.</p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>We ask that all clients and visitors keep their voices down when inside the activity area so as not to cause distress to the animals.</p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>No smoking is allowed near the animals. </p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>Caregivers of children under the age of 10 can remain on the premises during their child’s session.</p>
+                    </div>
+                    <div class="benefit">
+                      <i class="fas fa-book"></i>
+                      <p>CHAC reserves the right to replace the animal-assisted activity without prior notice or consent if the animal is unwell or unable to be present that day.</p>
+                    </div>
+              </div>
+              <!-- Other benefits -->
+
+              <div class="section" id="section3">
+              <h2>Our Animal Assisted Education Program Includes</h2>
+              <p>Experience the transformative power of Animal Assisted Education (AAE) and provide your learners with unique and enriching educational experiences. Contact us today to learn more about our program and how it can benefit your educational institution or organization.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>CHAC</span>
+          </a>
+          <p>We hope to achieve this by improving the mental wellbeing of individuals around us through specialized therapy services that incorporates animals.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div> -->
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="AAE.html">Animal Assisted Education (AAE)</a></li>
+            <li><a href="AAP.html">Animal Assisted Psychotherapy (AAP)</a></li>
+            <li><a href="AAA.html">Animal Assisted Activities (AAA)</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+          
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+            const sections = document.querySelectorAll('.section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const target = this.getAttribute('data-target');
+                    const currentSection = document.querySelector('.section.active');
+
+                    // Hide current section
+                    currentSection.style.opacity = 0;
+                    setTimeout(() => {
+                        currentSection.classList.remove('active');
+                        currentSection.style.display = 'none';
+
+                        // Show target section
+                        const targetSection = document.getElementById(target);
+                        targetSection.style.display = 'block';
+                        setTimeout(() => {
+                            targetSection.classList.add('active');
+                            targetSection.style.opacity = 1;
+                        }, 10);
+                    }, 300);
+
+                    // Update active tab
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
