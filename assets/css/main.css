@@ -304,7 +304,7 @@ section {
 }
 
 .header .logo img {
-  max-height: 110px;
+  max-height: 10px;
   margin-right: 6px;
 }
 
@@ -1724,7 +1724,7 @@ section {
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
-  color: #fff;
+  color: #CAB88A;
 }
 
 .contact .info-item:last-child {
@@ -1733,7 +1733,7 @@ section {
 
 .contact .info-item i {
   font-size: 20px;
-  color: #fff;
+  color: #CAB88A;
   float: left;
   width: 44px;
   height: 44px;
@@ -1845,7 +1845,7 @@ section {
   background: var(--color-primary);
   border: 0;
   padding: 14px 45px;
-  color: #fff;
+  color: #CAB88A;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1884,11 +1884,11 @@ section {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #fff;
+  color: #CAB88A;
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #CAB88A;
   font-weight: 400;
   margin-bottom: 30px;
 }
@@ -1902,7 +1902,7 @@ section {
   padding: 14px 40px;
   border-radius: 50px;
   transition: 0.3s;
-  color: #fff;
+  color: #CAB88A;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.1);
