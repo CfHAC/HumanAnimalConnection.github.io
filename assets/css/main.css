@@ -29,6 +29,29 @@
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /* border-radius: 10px; */
+  background: #264C35;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#CAB88A;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #786d52;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
