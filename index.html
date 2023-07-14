@@ -181,15 +181,16 @@
           <div class="col-lg-6">
             <div class="content ps-0 ps-lg-5">
               <ul>
-                    <p class="fst-italic">
+                    <h3>
                 Our mission
+                    </h3>
                       <li><i class="bi bi-check"></i>To enhance emotional well-being and foster personal growth by harnessing the power of the human-animal bond as a catalyst.</li> 
               </ul>
 
-              <p class="fst-italic">
+              <h6>
                
                 Our values 
-              </p>
+              </h6>
               <ul>
                 <li><i class="bi bi-check"></i>Compassion: We approach our counselling services with empathy, understanding, and a genuine desire to support individuals on their journey to improved mental health and well-being. We recognize the unique role that animals play nurturing empathy and compassion.
 
@@ -738,7 +739,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="https://formspree.io/f/mqkvkoqy" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/mqkvkoqy" method="post" role="form" class="php-email-form" onsubmit="submitForm(event)">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -852,6 +853,46 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- <form script> -->
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+    
+        // Get the form element
+        var form = event.target;
+    
+        // Disable the submit button to prevent multiple submissions
+        var submitButton = form.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+    
+        // Perform the form submission using AJAX/fetch
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+          .then(function(response) {
+            // Handle the response here if needed
+            // For example, you can show a success message dynamically
+    
+            // Reset the form
+            form.reset();
+    
+            // Re-enable the submit button
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Send Message';
+          })
+          .catch(function(error) {
+            // Handle the error here if needed
+            console.error(error);
+    
+            // Re-enable the submit button
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Send Message';
+          });
+      }
+    </script>
 
 </body>
 
