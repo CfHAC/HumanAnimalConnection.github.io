@@ -2689,3 +2689,124 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+
+/* Styles for the modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Styles for the modal content */
+.modal-content {
+  background-color: var(--color-primary);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid var(--color-secondary);
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Style for the close button (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+/* Style for modal headings */
+.modal h2,.modal h3 {
+  color: var(--color-secondary);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal h3 {
+  margin-top: 20px;
+}
+
+.modal p {
+  color: white;
+}
+
+.modal a {
+  color:var(--color-secondary);
+}
+
+/* Style for contact info */
+.contact-info1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-info1 a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+/* Media query to make the modal responsive */
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+  }
+}
+
+/* Style for the navigation bar */
+.modal-navbar {
+  margin-bottom: 20px;
+}
+
+.modal-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-navbar li {
+  margin-right: 15px;
+}
+
+/* Style for the navigation links */
+.nav-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Animation for modal fade in */
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

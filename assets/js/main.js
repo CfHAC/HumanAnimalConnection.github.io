@@ -291,3 +291,102 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// For AAA modal
+
+function openModal(modal) {
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden'; // Disable scrolling on the body when the modal is open
+  // Show only the Introduction section initially for the respective modal
+  showSection('intro', modal);
+}
+
+function closeModal(modal) {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto'; // Enable scrolling on the body when the modal is closed
+}
+
+const openModalBtn1 = document.getElementById('openModalBtn1');
+const modal1 = document.getElementById('myModal');
+
+const openModalBtn2 = document.getElementById('openModalBtn2');
+const modal2 = document.getElementById('myModal2');
+
+const openModalBtn3 = document.getElementById('openModalBtn3');
+const modal3 = document.getElementById('myModal3');
+
+const openModalBtn4 = document.getElementById('openModalBtn4');
+const modal4 = document.getElementById('myModal4');
+
+const openModalBtn5 = document.getElementById('openModalBtn5');
+const modal5 = document.getElementById('myModal5');
+
+openModalBtn1.addEventListener('click', function () {
+  openModal(modal1);
+});
+
+openModalBtn2.addEventListener('click', function () {
+  openModal(modal2);
+});
+
+openModalBtn3.addEventListener('click', function () {
+  openModal(modal3);
+});
+
+openModalBtn4.addEventListener('click', function () {
+  openModal(modal4);
+});
+
+openModalBtn5.addEventListener('click', function () {
+  openModal(modal5);
+});
+
+modal1.querySelector('.close').addEventListener('click', () => closeModal(modal1));
+modal2.querySelector('.close').addEventListener('click', () => closeModal(modal2));
+modal3.querySelector('.close').addEventListener('click', () => closeModal(modal3));
+modal4.querySelector('.close').addEventListener('click', () => closeModal(modal4));
+modal5.querySelector('.close').addEventListener('click', () => closeModal(modal5));
+
+window.addEventListener('click', function (event) {
+  if (event.target === modal1) {
+    closeModal(modal1);
+  }
+  if (event.target === modal2) {
+    closeModal(modal2);
+  }
+  if (event.target === modal3) {
+    closeModal(modal3);
+  }
+  if (event.target === modal4) {
+    closeModal(modal4);
+  }
+  if (event.target === modal5) {
+    closeModal(modal5);
+  }
+});
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    const sectionId = this.getAttribute('data-section');
+    showSection(sectionId, modal1);
+    showSection(sectionId, modal2);
+    showSection(sectionId, modal3);
+    showSection(sectionId, modal4);
+    showSection(sectionId, modal5);
+  });
+});
+
+function showSection(sectionId, modal) {
+  const modalSections = modal.querySelectorAll('.modal-section');
+  modalSections.forEach((section) => {
+    if (section.getAttribute('id') === sectionId) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
