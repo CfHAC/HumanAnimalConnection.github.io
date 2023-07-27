@@ -6,21 +6,12 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Centre for Human-Animal Connection</title>
-  <meta property="og:image" content="assets/img/Logo.png" />
-  <meta name="description" content="Centre for Human-Animal Connection (CHAC) improves the well-being of humans through human-animal bond, one human at a time."/>
-  <meta property="og:title" content="Centre for Human-Animal Connection" />
-  <meta property="og:description" content="Centre for Human-Animal Connection (CHAC) improves the well-being of humans through human-animal bond, one human at a time." />
-  <meta property="og:image" content="assets/img/Logo.png" />
-
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link href="assets/img/Logo.png" rel="icon">
+  <link href="assets/img/Logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -852,6 +843,22 @@
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Check if the URL has a hash (e.g., #targetDiv) and the target element exists
+      
+      var hash = window.location.hash;
+      if (hash) {
+        var targetElement = document.querySelector(hash);
+        if (targetElement) {
+          // Scroll to the target element
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+    </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
