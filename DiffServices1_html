@@ -111,7 +111,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   <!-- Grid -->
   <div class="w3-row">
     <center>
-    <img src="assets/img/interaction" alt="Nature" style="width:97.5%">
+    <img src="assets/img/aaa" alt="Nature" style="width:97.5%">
   </center>
   <!-- Blog entries -->
   <div class="w3-col l8 s12">
