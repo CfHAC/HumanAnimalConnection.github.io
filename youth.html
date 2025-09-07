@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Animal-Assisted Activities (AAA)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo.png" rel="icon">
+  <link href="assets/img/Logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .section {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .section.active {
+        display: block;
+        opacity: 1;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .benefit i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .nav-tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-tabs li {
+        margin-right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s;
+    }
+
+    .nav-tabs li.active {
+        color: #ffffff;
+        background-color: #CAB88A;
+    }
+
+     .gallery {
+        --s: 150px; /* control the size */
+        --g: 10px;  /* control the gap */
+        display: grid;
+        margin: calc(var(--s) + var(--g));
+    }
+
+    .gallery > img {
+        grid-area: 1/1;
+        width: var(--s);
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+        transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: .2s linear;
+      }
+    .gallery > img:hover {
+      filter: grayscale(0);
+      z-index: 1;
+      --_t: 1.2;
+    }
+
+    .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    .gallery > img:nth-child(4),
+    .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    .gallery > img:nth-child(5), 
+    .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a  style="color: #CAB88A;" href="mailto:hello@chacsg.com">hello@chacsg.com</a></i>
+        <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span  style="color: #CAB88A;">+65 8772 5464</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a  style="color: #CAB88A;" href="https://www.instagram.com/chac.sg/" class="instagram"><i class="bi bi-instagram"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#about" onclick="scrollToSection()">About</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#services" onclick="scrollToSection()">Services</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#testimonials" onclick="scrollToSection()">Testimonials</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#team" onclick="scrollToSection()">Team</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#faq" onclick="scrollToSection()">FAQ</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#contact" onclick="scrollToSection()">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <!-- <div class="col-lg-5 text-center"> -->
+              <!-- <div class="gallery">
+                <img src="assets/img/chac ig.png">
+                <img src="assets/img/about.jpg">
+                <img src="assets/img/c.png">
+                <img src="assets/img/d.png">
+                <img src="assets/img/e.png">
+                <img src="assets/img/f.png">
+                <img src="assets/img/b.jpg">
+              </div> -->
+            <!-- </div> -->
+            <div class="col-lg-6 text-center">
+              <!-- <br><br><br><br><br> -->
+              <h2 style="color: #CAB88A;">Youth Programmes</h2>
+              <p style="color: #CAB88A;">AAAs for youth, by youth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Youth Programmes </li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+
+              <ul class="nav-tabs">
+                <li class="tab active" data-target="section1">Why?</li>
+                <li class="tab" data-target="section2">How?</li>
+                <li class="tab" data-target="section4">Contact Us</li>
+              </ul>
+
+              <div class="section active" id="section1">
+                <h2>Why?</h2>
+    <p>We were youths once, and we know how important it is to have space to try, grow, and be heard. Through these programmes, we hope every young person can experience the connection with animals and the sense of care it brings.</p>
+    <p>These programmes also aim to give young people the chance to shape ideas, build confidence, and make a difference through running animal-assisted activities.</p>
+</div>
+          
+        
+            <div class="section" id="section2">
+                <h2>How?</h2>
+    <p>We run sessions with animals that bring calm and connection, hold circles that spark friendships, and guide train-the-trainer programmes where youths run their own projects - for youth, by youth, and one day- for all, by youth.</p>
+</div>
+      
+        
+            <div class="section" id="section4">
+                <h2>Contact Us</h2>
+                <p>Reach out to us to find out more about our youth programmes and how they can support your team or organisation. Together, we can do good for our communities by giving youth the chance to grow alongside animals and each other.</p>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Youth Programs</h3>
+              <ul>
+                <a href="#" id="openModalBtn1">
+                  <li>
+                    <span>Hall/Faculty Visits</span>  </li>
+                </a>
+                <a href="#" id="openModalBtn2"><li><span>Train-the-trainer</span></li></a>
+                <a href="#" id="openModalBtn3"><li><span>Design to deliver</span></li></a>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span style="color: #CAB88A;">CHAC</span>
+          </a>
+          <p style="color: #CAB88A;">With animals, we learn to truly understand</p>
+          <div class="social-links d-flex mt-4">
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+            <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div> -->
+
+       <div class="col-lg-2 col-6 footer-links">
+          <h4 style="color: #CAB88A;">Our Programmes</h4>
+          <ul>
+            <li><a href="AAA.html" style="color: #CAB88A;">General</a></li>
+            <li><a href="youth.html" style="color: #CAB88A;">For Youth</a></li>
+            <li><a href="seniors.html" style="color: #CAB88A;">For Seniors</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4 style="color: #CAB88A;">Contact Us</h4>
+          <p style="color: #CAB88A;">
+            
+            <strong>Phone:</strong> +65 8772 5464<br>
+            <strong>Email:</strong> hello@chacsg.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright" style="color: #CAB88A;">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits" style="color: #CAB88A;">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/" style="color: #CAB88A;">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <!-- First Modal - Informal AAA -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <nav class="modal-navbar">
+        <ul>
+          <li><a href="#intro" class="nav-link" data-section="intro">Introduction</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-section="how-it-works">How it Works</a></li>
+          <li><a href="#duration" class="nav-link" data-section="duration">Duration</a></li>
+          <li><a href="#age-group" class="nav-link" data-section="age-group">Age Group</a></li>
+          <li><a href="#price" class="nav-link" data-section="price">Price</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="modal-section" id="intro">
+        <h2>Informal AAA (School Visits)</h2>
+        <p>
+          Our Informal Animal-Assisted Activities bring CHAC to schools, hospitals, and community centers to provide a unique and heartwarming experience for participants of all ages and abilities. 
+          These visits offer a refreshing break from routine and a chance for individuals to experience the joy and healing power that animals bring into our lives. <br><br>
+          During these visits, we bring in trained animals to offer joy, comfort, and companionship through casual interactions. 
+          With no structured format, these visits allow individuals to engage and bond with our animals in a relaxed and informal setting. Whether you are young, old, disabled or abled, a student, a patient, or a member of the community seeking some uplifting moments, our animals welcome all with open arms.
+        </p>
+      </div>
+      <div class="modal-section" id="how-it-works">
+        <h2>How it Works</h2>
+        <p>
+          In our Informal AAA Institutional Visits with Animals, we create an environment of relaxation and spontaneity. 
+          Our well-trained animals, accompanied by experienced handlers, engage in casual interactions with participants. <br><br>
+          These visits have no structured format, allowing individuals to freely connect with our animals at their own pace. 
+          Participants can enjoy petting, cuddling, and spending quality time with the animals, promoting a sense of joy and emotional well-being.
+        </p>
+      </div>
+      <div class="modal-section" id="duration">
+        <h2>Duration</h2>
+        <p>
+          The sessions span from 45 minutes to 90 minutes.
+        </p>
+      </div>
+      <div class="modal-section" id="age-group">
+        <h2>Age Group</h2>
+        <p>
+          Our informal animal-assisted activities cater to individuals of all age groups, from the young to the old. <br><br>
+          We believe that the presence of animals has the power to transcend age barriers and provide a positive impact on everyone, irrespective of their age or life stage. 
+          Whether it's young children experiencing the wonder of animals or senior citizens finding comfort and companionship, our program is open to everyone.
+        </p>
+      </div>
+      <div class="modal-section" id="price">
+        <h2>Price</h2>
+        <p>
+          We understand the value of these heartwarming interactions, and we strive to make them accessible to as many institutions as possible. <br><br>For detailed pricing information and to discuss your specific needs, please reach out to us at hello@chacsg.com. We are dedicated to fostering meaningful connections and spreading happiness through our informal animal-assisted activities, and we look forward to making a difference in your community.
+        </p>
+      </div>
+      <div class="modal-section" id="contact">
+        <h2>Contact</h2>
+        <p>
+          To schedule a memorable and heartwarming informal AAA Institutional Visit with Animals, please contact us at hello@chacsg.com. We look forward to spreading happiness and fostering human-animal connections together!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Modal - Play and Learn with Animals AAA -->
+
+  <div id="myModal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <nav class="modal-navbar">
+        <ul>
+          <li><a href="#intro" class="nav-link" data-section="intro">Introduction</a></li>
+          <li><a href="#target-group" class="nav-link" data-section="target-group">Target Group</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-section="how-it-works">How it Works</a></li>
+          <li><a href="#price" class="nav-link" data-section="price">Price</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="modal-section" id="intro">
+        <h2>Play and Learn with Animals AAA:</h2>
+        <p>
+          Our "Play and Learn with Animals" AAA program offers a delightful experience that combines the magic of animal interactions with the power of play. <br><br>
+          Designed to foster joy, connection, and well-being, these engaging sessions provide a safe and interactive environment for individuals to participate in play-based activities with our trained animals. 
+          Through playful interactions, participants can discover the profound impact of the human-animal bond on their emotional, social, and cognitive well-being.
+        </p>
+      </div>
+      <div class="modal-section" id="target-group">
+        <h2>Who is the Target Group?</h2>
+        <p>
+          "Play and Learn with Animals" is a welcoming and inclusive AAA program that caters to individuals of all ages and abilities. <br><br>Whether you're a curious preschooler exploring the wonders of the animal world or a teenager seeking a compassionate companion, our program caters to your unique needs and preferences. Our facilitators adapt activities and interactions based on the age and abilities of the participants, ensuring an enjoyable and enriching experience for everyone involved.
+        </p>
+      </div>
+      <div class="modal-section" id="how-it-works">
+        <h2>How It Works:</h2>
+        <p>
+          Our sessions are thoughtfully designed to promote engagement, joy, and well-being through a delightful blend of play-based activities and animal interactions.<br><br> Under the guidance of our experienced facilitators, participants will have the opportunity to form meaningful bonds with our animals, fostering a sense of empathy, trust, and comfort. The therapeutic benefits of the human-animal bond are enhanced through interactive games, exercises, and shared moments of play, creating a safe and supportive space for personal growth and connection.
+        </p>
+      </div>
+      <div class="modal-section" id="price">
+        <h2>Price:</h2>
+        <p>
+          At Centre for Human-Animal Connection, we believe in making animal-assisted interactions accessible to all. We offer flexible pricing options for our "Play and Learn with Animals" program, tailored to accommodate different budgets and settings.<br><br> For detailed information about our pricing structure and package options, please get in touch with us at hello@chacsg.com. We'll be more than happy to assist you in planning a memorable and transformative experience with our beloved animal friends.
+        </p>
+      </div>
+      <div class="modal-section" id="contact">
+        <h2>Join Us:</h2>
+        <p>
+          Join us in creating beautiful memories and building meaningful connections through Play and Learn with Animals! To know more about our program and pricing structure, please contact us at hello@chacsg.com.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Modal - MOAAA -->
+  <div id="myModal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <nav class="modal-navbar">
+          <ul>
+            <li><a href="#intro" class="nav-link" data-section="intro">Introduction</a></li>
+            <li><a href="#how-it-works" class="nav-link" data-section="how-it-works">How it Works</a></li>
+            <li><a href="#duration" class="nav-link" data-section="duration">Duration</a></li>
+            <li><a href="#target-group" class="nav-link" data-section="target-group">Target Group</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="modal-section" id="intro">
+          <h2>Mindfulness Oriented Animal-Assisted Activities</h2>
+          <p>
+            Introducing MOA³ - Mindfulness Oriented Animal-Assisted Activities, a collaborative program by <a href="https://www.centreformindfulness.sg/mindfulness-for-all" target="_blank">Centre for Mindfulness</a> and Centre for Human-Animal Connection. <br><br>MOA³ is designed not only to improve the well-being of individuals but also to help cultivate a calm mind that fosters introspection. This transformative program is suitable for groups ranging from primary school to adults.
+          </p>
+        </div>
+        <div class="modal-section" id="how-it-works">
+          <h2>How it Works?</h2>
+          <p>
+            At MOA³, we recognize the significance of mindfulness and its harmonious integration with the human-animal connection. Our sessions offer a unique blend of mindfulness practices and animal-assisted activities, providing participants with a profound and enriching experience.
+          </p>
+          <p>
+            Guided by our certified mindfulness facilitators, participants will have the opportunity to explore mindfulness techniques while engaging with our trained animals. These interactions can lead to a deeper understanding of oneself and the world around them, ultimately contributing to personal growth and well-being.
+          </p>
+        </div>
+        <div class="modal-section" id="duration">
+          <h2>Duration</h2>
+          <p>
+            One session lasts from 1.5 to 2 hours.
+          </p>
+        </div>
+        <div class="modal-section" id="target-group">
+          <h2>Target Group</h2>
+          <p>
+            We believe that everyone, from primary school children to adults, can benefit from this mindfulness-oriented approach. Our program is designed to accommodate diverse age groups and ensure that each participant gains meaningful insights from these sessions.
+          </p>
+        </div>
+        <div class="modal-section" id="contact">
+          <h2>Contact</h2>
+          <p>
+            To learn more about MOA³ and its availability for your group, please reach out to us at hello@chacsg.com. Together, let's embark on a journey of mindfulness, self-discovery, and the transformative power of the human-animal connection.
+          </p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script>
+    function navigateToDiv() {
+      // Get the URL of the target page
+      var targetPageURL = "index.html"; // Replace with the URL of your target page
+    
+      // Navigate to the target page
+      window.location.href = targetPageURL;
+    }
+    </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="test.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const target = this.getAttribute('data-target');
+                const currentSection = document.querySelector('.section.active');
+
+                // Hide current section
+                currentSection.style.opacity = 0;
+                setTimeout(() => {
+                    currentSection.classList.remove('active');
+                    currentSection.style.display = 'none';
+
+                    // Show target section
+                    const targetSection = document.getElementById(target);
+                    targetSection.style.display = 'block';
+                    setTimeout(() => {
+                        targetSection.classList.add('active');
+                        targetSection.style.opacity = 1;
+                    }, 10);
+                }, 300);
+
+                // Update active tab
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
