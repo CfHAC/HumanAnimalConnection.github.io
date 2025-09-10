@@ -623,102 +623,60 @@
     </section> -->
     <!-- End Our Team Section -->
 
-<!-- === image gallery === -->
-<section id="team" class="team sections-bg" style="position: relative;">
-
-  <!-- Background Grid -->
-  <div class="team-bg-grid" aria-hidden="true">
-    <div class="grid">
-      <!-- 12 cells, 3 x 4 -->
-      <div class="cell"><img src="assets/img/team/team-1.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-2.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-3.jpg" alt=""></div>
-
-      <div class="cell"><img src="assets/img/team/team-4.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-5.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-6.jpg" alt=""></div>
-
-      <div class="cell"><img src="assets/img/team/team-7.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-8.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-1.jpg" alt=""></div>
-
-      <div class="cell"><img src="assets/img/team/team-2.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-3.jpg" alt=""></div>
-      <div class="cell"><img src="assets/img/team/team-4.jpg" alt=""></div>
-    </div>
-  </div>
-
-  <!-- Existing team container -->
+<!-- ======= Gallery Section (Borderless Images) ======= -->
+<section id="team" style="padding: 60px 0;">
   <div class="container" data-aos="fade-up">
+
     <div class="section-header">
-      <h2>Our Team</h2>
+      <h2>Gallery</h2>
     </div>
+
     <div class="row gy-4" style="align-items: center; justify-content: center;">
-      <!-- your existing team members go here -->
-    </div>
-  </div>
+
+      <!-- Member 1 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 4 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 5 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 6 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 7 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="700">
+        <img src="assets/img/team/team-7.jpg" class="img-fluid" alt="">
+      </div>
+
+      <!-- Member 8 -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="800">
+        <img src="assets/img/team/team-8.jpg" class="img-fluid" alt="">
+      </div>
+    </div> <!-- End .row -->
+
+  </div> <!-- End .container -->
 </section>
 
-<!-- === CSS for the grid === -->
-<style>
-.team-bg-grid {
-  position: absolute;
-  inset: 0; /* cover whole section */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none; /* keep content clickable */
-  z-index: 0;
-}
-
-.team-bg-grid .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  width: min(1100px, 100%);
-  opacity: 0.18;
-  filter: grayscale(10%);
-}
-
-.team-bg-grid .cell {
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%; /* square cells */
-  border-radius: 8px;
-  overflow: hidden;
-  background: #eee;
-}
-
-.team-bg-grid .cell img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#team .container {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 900px) {
-  .team-bg-grid .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 90%;
-  }
-}
-
-@media (max-width: 520px) {
-  .team-bg-grid .grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 8px;
-    width: 90%;
-    opacity: 0.12;
-  }
-}
-</style>
 
           
     <!-- ======= Frequently Asked Questions Section ======= -->
@@ -1097,4 +1055,5 @@
 </body>
 
 </html>
+
 
