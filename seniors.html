@@ -1,1 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Animal-Assisted Activities (AAA)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo.png" rel="icon">
+  <link href="assets/img/Logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .section {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .section.active {
+        display: block;
+        opacity: 1;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .benefit i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .nav-tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-tabs li {
+        margin-right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s;
+    }
+
+    .nav-tabs li.active {
+        color: #ffffff;
+        background-color: #CAB88A;
+    }
+
+     .gallery {
+        --s: 150px; /* control the size */
+        --g: 10px;  /* control the gap */
+        display: grid;
+        margin: calc(var(--s) + var(--g));
+    }
+
+    .gallery > img {
+        grid-area: 1/1;
+        width: var(--s);
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+        transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: .2s linear;
+      }
+    .gallery > img:hover {
+      filter: grayscale(0);
+      z-index: 1;
+      --_t: 1.2;
+    }
+
+    .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    .gallery > img:nth-child(4),
+    .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    .gallery > img:nth-child(5), 
+    .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a  style="color: #CAB88A;" href="mailto:hello@chacsg.com">hello@chacsg.com</a></i>
+        <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span  style="color: #CAB88A;">+65 8772 5464</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a  style="color: #CAB88A;" href="https://www.instagram.com/chac.sg/" class="instagram"><i class="bi bi-instagram"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#about" onclick="scrollToSection()">About</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#services" onclick="scrollToSection()">Services</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#testimonials" onclick="scrollToSection()">Testimonials</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#team" onclick="scrollToSection()">Team</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#faq" onclick="scrollToSection()">FAQ</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#contact" onclick="scrollToSection()">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <!-- <div class="col-lg-5 text-center"> -->
+              <!-- <div class="gallery">
+                <img src="assets/img/chac ig.png">
+                <img src="assets/img/about.jpg">
+                <img src="assets/img/c.png">
+                <img src="assets/img/d.png">
+                <img src="assets/img/e.png">
+                <img src="assets/img/f.png">
+                <img src="assets/img/b.jpg">
+              </div> -->
+            <!-- </div> -->
+            <div class="col-lg-6 text-center">
+              <!-- <br><br><br><br><br> -->
+              <h2 style="color: #CAB88A;">Animal-Assisted Activities (AAA) </h2>
+              <p style="color: #CAB88A;">Activities involving interactions with animals, to enhance well-being and quality of life. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Animal-Assisted Activities (AAA) </li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+   <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p> Centre for Human-Animal Connection (CHAC) is a team of humans and non-human animals <br> dedicated to improving the well-being of humans, one human at a time. 
+          </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>"Animals are such agreeable friends. They ask no questions. They pass no criticisms." - George Elliot</h3>
+            <img src="assets/img/indexpic.JPG" class="img-fluid rounded-4 mb-4" alt="">
+           
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <ul>
+                    <h4>
+                Our mission
+                    </h4>
+                      <li>To enhance emotional well-being and foster personal growth through the human-animal bond.</li> 
+              </ul>
+
+              <h4>
+               
+                Our values 
+              </h4>
+              <ul>
+                                <li><i class="bi bi-check"></i>Growth-Centered: We believe mental wellness is a lifelong journey. We nurture personal development, emotional learning, and inner strength in every program and interaction. </li>
+
+                <li><i class="bi bi-check"></i>Ownership of Growth: To empower individuals to take charge of their mental wellness journey, cultivating resilience, self-awareness, and purpose. </li>
+
+
+                <li><i class="bi bi-check"></i>Open Conversations: We create space for honest dialogue around mental health to reduce stigma and build trust in every interaction.</li>
+                <li><i class="bi bi-check"></i>Do Good Together: We believe in collaboration, kindness, and collective action for a more sustainable, just, and caring world.
+
+
+</li>
+
+
+             
+              <!-- <div class="position-relative mt-4">
+                <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt=""> -->
+                <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span style="color: #CAB88A;">CHAC</span>
+          </a>
+          <p style="color: #CAB88A;">With animals, we learn to truly understand</p>
+          <div class="social-links d-flex mt-4">
+            <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+            <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div> -->
+
+       <div class="col-lg-2 col-6 footer-links">
+          <h4 style="color: #CAB88A;">Our Programmes</h4>
+          <ul>
+            <li><a href="AAA.html" style="color: #CAB88A;">General</a></li>
+            <li><a href="youth.html" style="color: #CAB88A;">For Youth</a></li>
+            <li><a href="seniors.html" style="color: #CAB88A;">For Seniors</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4 style="color: #CAB88A;">Contact Us</h4>
+          <p style="color: #CAB88A;">
+            
+            <strong>Phone:</strong> +65 8772 5464<br>
+            <strong>Email:</strong> hello@chacsg.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright" style="color: #CAB88A;">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits" style="color: #CAB88A;">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/" style="color: #CAB88A;">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script>
+    function navigateToDiv() {
+      // Get the URL of the target page
+      var targetPageURL = "index.html"; // Replace with the URL of your target page
+    
+      // Navigate to the target page
+      window.location.href = targetPageURL;
+    }
+    </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="test.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const target = this.getAttribute('data-target');
+                const currentSection = document.querySelector('.section.active');
+
+                // Hide current section
+                currentSection.style.opacity = 0;
+                setTimeout(() => {
+                    currentSection.classList.remove('active');
+                    currentSection.style.display = 'none';
+
+                    // Show target section
+                    const targetSection = document.getElementById(target);
+                    targetSection.style.display = 'block';
+                    setTimeout(() => {
+                        targetSection.classList.add('active');
+                        targetSection.style.opacity = 1;
+                    }, 10);
+                }, 300);
+
+                // Update active tab
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
