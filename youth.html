@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Youth Programmes</title>
+  <title>Youth Programmes | CHAC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -16,9 +14,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,235 +26,118 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .section {
-      display: none;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .section.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .nav-tabs {
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: left;
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .nav-tabs li {
-      margin-right: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #333;
-      padding: 10px 15px;
-      border-radius: 8px;
-      background-color: #f5f5f5;
-      transition: background-color 0.3s;
-    }
-
-    .nav-tabs li.active {
-      color: #ffffff;
-      background-color: #CAB88A;
-    }
-
-    /* Modal styling */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-content {
-      background: #fff;
-      margin: 5% auto;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 800px;
-      position: relative;
-    }
-
-    .modal .close {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+    body { font-family: Arial, sans-serif; }
+    .nav-tabs { margin-bottom: 20px; display: flex; list-style: none; padding: 0; }
+    .nav-tabs li { margin-right: 10px; cursor: pointer; font-weight: bold; padding: 10px 15px; border-radius: 8px; background-color: #f5f5f5; transition: background-color 0.3s; }
+    .nav-tabs li.active { color: #ffffff; background-color: #CAB88A; }
+    .section { display: none; margin-bottom: 30px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); background-color: #fff; opacity: 0; transition: opacity 0.3s; }
+    .section.active { display: block; opacity: 1; }
+    .portfolio-info ul { padding-left: 0; }
+    .portfolio-info li { list-style: none; margin-bottom: 10px; }
+    .portfolio-info li a { text-decoration: none; color: #333; }
+    /* Modals */
+    .youth-modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); }
+    .youth-modal-content { background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; width: 80%; max-width: 700px; position: relative; }
+    .youth-close { position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer; }
   </style>
 </head>
-
 <body>
 
   <!-- ======= Header ======= -->
-  <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a style="color: #CAB88A;"
-            href="mailto:hello@chacsg.com">hello@chacsg.com</a></i>
-        <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span
-            style="color: #CAB88A;">+65 8772 5464</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i
-            class="bi bi-linkedin"></i></a>
-        <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg/" class="instagram"><i
-            class="bi bi-instagram"></i></a>
-      </div>
-    </div>
-  </section><!-- End Top Bar -->
-
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
+        <h1 style="color: #CAB88A;">CHAC<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#about">About</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#services">Services</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#testimonials">Testimonials</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#team">Team</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#faq">FAQ</a></li>
-          <li><a style="color: #CAB88A;" href="index.html#contact">Contact</a></li>
+          <li><a style="color:#CAB88A;" href="index.html">Home</a></li>
+          <li><a style="color:#CAB88A;" href="index.html#about" onclick="scrollToSection()">About</a></li>
+          <li><a style="color:#CAB88A;" href="index.html#services" onclick="scrollToSection()">Services</a></li>
+          <li><a style="color:#CAB88A;" href="index.html#contact" onclick="scrollToSection()">Contact</a></li>
         </ul>
       </nav>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('');">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2 style="color: #CAB88A;">Youth Programmes</h2>
-              <p style="color: #CAB88A;">AAAs for youth, by youth</p>
-            </div>
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 style="color: #CAB88A;">Youth Programmes</h2>
+            <p style="color: #CAB88A;">AAAs for youth, by youth</p>
           </div>
-        </div>
-      </div>
-      <nav>
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Youth Programmes</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-between gy-4 mt-4">
-          <div class="col-lg-8">
-            <div class="portfolio-description">
-              <ul class="nav-tabs">
-                <li class="tab active" data-target="section1">Why?</li>
-                <li class="tab" data-target="section2">How?</li>
-                <li class="tab" data-target="section3">Contact Us</li>
-              </ul>
-
-              <div class="section active" id="section1">
-                <h2>Why?</h2>
-                <p>We were youths once, and we know how important it is to have space to try, grow, and be heard. Through these programmes, we hope every young person can experience the connection with animals and the sense of care it brings.</p>
-                <p>These programmes also aim to give young people the chance to shape ideas, build confidence, and make a difference through running animal-assisted activities.</p>
-              </div>
-
-              <div class="section" id="section2">
-                <h2>How?</h2>
-                <p>We run sessions with animals that bring calm and connection, hold circles that spark friendships, and guide train-the-trainer programmes where youths run their own projects - for youth, by youth, and one day - for all, by youth.</p>
-              </div>
-
-              <div class="section" id="section3">
-                <h2>Contact Us</h2>
-                <p>Reach out to us to find out more about our youth programmes and how they can support your team or organisation. Together, we can do good for our communities by giving youth the chance to grow alongside animals and each other.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="portfolio-info">
-              <h3>Youth Programs</h3>
-              <ul>
-                <a href="#" id="openModalBtn1"><li><span>Hall/Faculty Visits</span></li></a>
-                <a href="#" id="openModalBtn2"><li><span>Train-the-trainer</span></li></a>
-                <a href="#" id="openModalBtn3"><li><span>Design to Deliver</span></li></a>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span style="color: #CAB88A;">CHAC</span>
-          </a>
-          <p style="color: #CAB88A;">With animals, we learn to truly understand</p>
-          <div class="social-links d-flex mt-4">
-            <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i
-                class="bi bi-linkedin"></i></a>
-            <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg" class="instagram"><i
-                class="bi bi-instagram"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-6 footer-links">
-          <h4 style="color: #CAB88A;">Our Programmes</h4>
-          <ul>
-            <li><a href="AAA.html" style="color: #CAB88A;">General</a></li>
-            <li><a href="youth.html" style="color: #CAB88A;">For Youth</a></li>
-            <li><a href="seniors.html" style="color: #CAB88A;">For Seniors</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4 style="color: #CAB88A;">Contact Us</h4>
-          <p style="color: #CAB88A;">
-            <strong>Phone:</strong> +65 8772 5464<br>
-            <strong>Email:</strong> hello@chacsg.com<br>
-          </p>
         </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Youth Programmes</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
 
-  <!-- ======= Modals ======= -->
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-between gy-4 mt-4" id="youthProgramSection">
+        <div class="col-lg-8">
+          <div class="portfolio-description">
+            <ul class="nav-tabs">
+              <li class="tab active" data-target="youthSection1">Why?</li>
+              <li class="tab" data-target="youthSection2">How?</li>
+              <li class="tab" data-target="youthSection3">Contact Us</li>
+            </ul>
+
+            <div class="section active" id="youthSection1">
+              <h2>Why?</h2>
+              <p>We were youths once, and we know how important it is to have space to try, grow, and be heard. Through these programmes, we hope every young person can experience the connection with animals and the sense of care it brings.</p>
+              <p>These programmes also aim to give young people the chance to shape ideas, build confidence, and make a difference through running animal-assisted activities.</p>
+            </div>
+
+            <div class="section" id="youthSection2">
+              <h2>How?</h2>
+              <p>We run sessions with animals that bring calm and connection, hold circles that spark friendships, and guide train-the-trainer programmes where youths run their own projects - for youth, by youth, and one day - for all, by youth.</p>
+            </div>
+
+            <div class="section" id="youthSection3">
+              <h2>Contact Us</h2>
+              <p>Reach out to us to find out more about our youth programmes and how they can support your team or organisation. Together, we can do good for our communities by giving youth the chance to grow alongside animals and each other.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="portfolio-info">
+            <h3>Youth Programs</h3>
+            <ul>
+              <a href="#" id="openYouthModal1"><li><span>Hall/Faculty Visits</span></li></a>
+              <a href="#" id="openYouthModal2"><li><span>Train-the-trainer</span></li></a>
+              <a href="#" id="openYouthModal3"><li><span>Design to Deliver</span></li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Portfolio Details Section -->
+
+  <!-- ======= Youth Program Modals ======= -->
+
   <!-- Modal 1: Hall/Faculty Visits -->
-  <div id="myModal1" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+  <div id="youthModal1" class="youth-modal">
+    <div class="youth-modal-content">
+      <span class="youth-close" data-modal="youthModal1">&times;</span>
       <h2>Hall/Faculty Visits</h2>
       <p>Our faculty visits bring CHAC to schools, hospitals, and community centers to provide a unique and heartwarming experience for participants of all ages and abilities. These visits offer a refreshing break from routine and a chance for individuals to experience the joy and healing power that animals bring into our lives.</p>
       <p>During these visits, we bring in our animals to offer joy, comfort, and companionship through casual interactions. With no structured format, these visits allow individuals to engage and bond with our animals in a relaxed and informal setting.</p>
@@ -268,9 +147,9 @@
   </div>
 
   <!-- Modal 2: Train-the-trainer -->
-  <div id="myModal2" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+  <div id="youthModal2" class="youth-modal">
+    <div class="youth-modal-content">
+      <span class="youth-close" data-modal="youthModal2">&times;</span>
       <h2>Train-the-trainer</h2>
       <p>Our "Train-the-trainer" program equips youths to run sessions for their peers and other groups, including individuals with diverse abilities and seniors. The training covers both theory and practical application, preparing youth leaders to design and facilitate safe, meaningful activities with animals.</p>
       <p><strong>Target Group:</strong> Student leaders, Student-led groups, Service learning or Volunteer Clubs.</p>
@@ -280,9 +159,9 @@
   </div>
 
   <!-- Modal 3: Design to Deliver -->
-  <div id="myModal3" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+  <div id="youthModal3" class="youth-modal">
+    <div class="youth-modal-content">
+      <span class="youth-close" data-modal="youthModal3">&times;</span>
       <h2>Design to Deliver</h2>
       <p>Our Design to Deliver program is created for youths. We either design customised sessions based on your goals, or guide students to design their own program, which we then help bring to life. This approach gives youth ownership of the learning while ensuring a meaningful and engaging experience.</p>
       <p><strong>How it Works:</strong> First, we meet with your team to understand your objectives. Based on this, our facilitators create a customised plan, or support students in designing one themselves. Once the plan is ready, we deliver the sessions, combining both structured guidance and hands-on activities with animals.</p>
@@ -292,53 +171,74 @@
     </div>
   </div>
 
-  <!-- Vendor JS -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2025 CHAC. All Rights Reserved.
+      </div>
+      <div class="credits">
+        Designed by CHAC
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Tabs & Modal Script -->
+  <!-- ======= Youth Program JS ======= -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.tab');
-      const sections = document.querySelectorAll('.section');
-      const modals = document.querySelectorAll('.modal');
-      const closes = document.querySelectorAll('.close');
+    // Tabs functionality
+    const youthTabs = document.querySelectorAll("#youthProgramSection .nav-tabs li");
+    const youthSections = document.querySelectorAll("#youthProgramSection .section");
 
-      // Tab navigation
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
-          const target = this.getAttribute('data-target');
-          document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-          document.getElementById(target).classList.add('active');
-          tabs.forEach(t => t.classList.remove('active'));
-          this.classList.add('active');
+    youthTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        youthTabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const target = tab.getAttribute("data-target");
+        youthSections.forEach(sec => {
+          if(sec.id === target) sec.classList.add("active");
+          else sec.classList.remove("active");
         });
       });
+    });
 
-      // Modal triggers
-      document.getElementById('openModalBtn1').onclick = () => document.getElementById('myModal1').style.display = 'block';
-      document.getElementById('openModalBtn2').onclick = () => document.getElementById('myModal2').style.display = 'block';
-      document.getElementById('openModalBtn3').onclick = () => document.getElementById('myModal3').style.display = 'block';
+    // Modals functionality
+    const modalBtns = [
+      {btn: "openYouthModal1", modal: "youthModal1"},
+      {btn: "openYouthModal2", modal: "youthModal2"},
+      {btn: "openYouthModal3", modal: "youthModal3"}
+    ];
 
-      // Modal close buttons
-      closes.forEach(close => {
-        close.onclick = function () {
-          modals.forEach(m => m.style.display = 'none');
-        }
+    modalBtns.forEach(item => {
+      const button = document.getElementById(item.btn);
+      const modal = document.getElementById(item.modal);
+      const closeBtn = modal.querySelector(".youth-close");
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "block";
       });
 
-      // Close modals when clicking outside
-      window.onclick = function (event) {
-        modals.forEach(m => {
-          if (event.target == m) m.style.display = 'none';
-        });
-      }
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if(e.target === modal) modal.style.display = "none";
+      });
     });
   </script>
+</body>
+</html>
+
 </body>
 </html>
