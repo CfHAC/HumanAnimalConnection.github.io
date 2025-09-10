@@ -4,219 +4,341 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Youth Programmes</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo.png" rel="icon">
+  <link href="assets/img/Logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
     }
 
-    header, footer {
-      background: #f5f5f5;
-      padding: 15px;
-    }
-
-    h1, h2, h3 {
-      color: #333;
-    }
-
-    /* ---------- Tabs ---------- */
-    .tabs {
-      display: flex;
-      border-bottom: 2px solid #ccc;
-      margin-bottom: 20px;
-    }
-
-    .tabs label {
-      padding: 10px 15px;
-      margin-right: 5px;
-      background: #f5f5f5;
-      cursor: pointer;
-      border-radius: 5px 5px 0 0;
-    }
-
-    input[type="radio"] {
+    .section {
       display: none;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    .tab-content {
-      display: none;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 0 5px 5px 5px;
-      background: #fff;
-    }
-
-    #tab1:checked ~ .content #content1,
-    #tab2:checked ~ .content #content2,
-    #tab3:checked ~ .content #content3 {
+    .section.active {
       display: block;
+      opacity: 1;
     }
 
-    #tab1:checked + label,
-    #tab2:checked + label,
-    #tab3:checked + label {
-      background: #CAB88A;
-      color: #fff;
+    .nav-tabs {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: left;
+      list-style-type: none;
+      padding: 0;
     }
 
-    /* ---------- Modal ---------- */
+    .nav-tabs li {
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+      transition: background-color 0.3s;
+    }
+
+    .nav-tabs li.active {
+      color: #ffffff;
+      background-color: #CAB88A;
+    }
+
+    /* Modal styling */
     .modal {
       display: none;
       position: fixed;
-      z-index: 10;
-      padding-top: 80px;
+      z-index: 1000;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .modal:target {
-      display: block;
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .modal-content {
-      background-color: #fff;
-      margin: auto;
+      background: #fff;
+      margin: 5% auto;
       padding: 20px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 600px;
+      border-radius: 8px;
+      max-width: 800px;
       position: relative;
     }
 
-    .close {
+    .modal .close {
       position: absolute;
-      right: 15px;
-      top: 10px;
-      text-decoration: none;
+      top: 15px;
+      right: 20px;
       font-size: 24px;
       font-weight: bold;
-      color: #333;
-    }
-
-    .close:hover {
-      color: red;
-    }
-
-    .portfolio-info ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .portfolio-info ul li {
-      margin: 10px 0;
-    }
-
-    .portfolio-info ul a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .portfolio-info ul a:hover {
-      color: #CAB88A;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1 style="color: #CAB88A;">CHAC</h1>
-  </header>
-
-  <main>
-    <h2>Youth Programmes</h2>
-    <p>AAAs for youth, by youth</p>
-
-    <!-- Tabs -->
-    <div class="tabs">
-      <input type="radio" id="tab1" name="tab" checked>
-      <label for="tab1">Why?</label>
-
-      <input type="radio" id="tab2" name="tab">
-      <label for="tab2">How?</label>
-
-      <input type="radio" id="tab3" name="tab">
-      <label for="tab3">Contact Us</label>
-    </div>
-
-    <div class="content">
-      <div class="tab-content" id="content1">
-        <h2>Why?</h2>
-        <p>We were youths once, and we know how important it is to have space to try, grow, and be heard. Through these programmes, we hope every young person can experience the connection with animals and the sense of care it brings.</p>
-        <p>These programmes also aim to give young people the chance to shape ideas, build confidence, and make a difference through running animal-assisted activities.</p>
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a style="color: #CAB88A;"
+            href="mailto:hello@chacsg.com">hello@chacsg.com</a></i>
+        <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span
+            style="color: #CAB88A;">+65 8772 5464</span></i>
       </div>
-
-      <div class="tab-content" id="content2">
-        <h2>How?</h2>
-        <p>We run sessions with animals that bring calm and connection, hold circles that spark friendships, and guide train-the-trainer programmes where youths run their own projects - for youth, by youth, and one day - for all, by youth.</p>
-      </div>
-
-      <div class="tab-content" id="content3">
-        <h2>Contact Us</h2>
-        <p>Reach out to us to find out more about our youth programmes and how they can support your team or organisation. Together, we can do good for our communities by giving youth the chance to grow alongside animals and each other.</p>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
+        <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg/" class="instagram"><i
+            class="bi bi-instagram"></i></a>
       </div>
     </div>
+  </section><!-- End Top Bar -->
 
-    <!-- Portfolio Info with modal links -->
-    <div class="portfolio-info">
-      <h3>Youth Programs</h3>
-      <ul>
-        <li><a href="#modal1">Hall/Faculty Visits</a></li>
-        <li><a href="#modal2">Train-the-trainer</a></li>
-        <li><a href="#modal3">Design to Deliver</a></li>
-      </ul>
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#about">About</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#services">Services</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#testimonials">Testimonials</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#team">Team</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#faq">FAQ</a></li>
+          <li><a style="color: #CAB88A;" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
+  </header><!-- End Header -->
 
-    <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h2>Hall/Faculty Visits</h2>
-        <p>Our faculty visits bring CHAC to schools, hospitals, and community centers to provide a unique and heartwarming experience for participants of all ages and abilities. These visits offer a refreshing break from routine and a chance for individuals to experience the joy and healing power that animals bring into our lives.</p>
-        <p>During these visits, we bring in our animals to offer joy, comfort, and companionship through casual interactions. With no structured format, these visits allow individuals to engage and bond with our animals in a relaxed and informal setting.</p>
-        <p><strong>Duration:</strong> 45 minutes (guinea pigs, rabbits, cats, dogs) to 90 minutes (dogs only).</p>
-        <p><strong>Contact:</strong> hello@chacsg.com</p>
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2 style="color: #CAB88A;">Youth Programmes</h2>
+              <p style="color: #CAB88A;">AAAs for youth, by youth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Youth Programmes</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 mt-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <ul class="nav-tabs">
+                <li class="tab active" data-target="section1">Why?</li>
+                <li class="tab" data-target="section2">How?</li>
+                <li class="tab" data-target="section3">Contact Us</li>
+              </ul>
+
+              <div class="section active" id="section1">
+                <h2>Why?</h2>
+                <p>We were youths once, and we know how important it is to have space to try, grow, and be heard. Through these programmes, we hope every young person can experience the connection with animals and the sense of care it brings.</p>
+                <p>These programmes also aim to give young people the chance to shape ideas, build confidence, and make a difference through running animal-assisted activities.</p>
+              </div>
+
+              <div class="section" id="section2">
+                <h2>How?</h2>
+                <p>We run sessions with animals that bring calm and connection, hold circles that spark friendships, and guide train-the-trainer programmes where youths run their own projects - for youth, by youth, and one day - for all, by youth.</p>
+              </div>
+
+              <div class="section" id="section3">
+                <h2>Contact Us</h2>
+                <p>Reach out to us to find out more about our youth programmes and how they can support your team or organisation. Together, we can do good for our communities by giving youth the chance to grow alongside animals and each other.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Youth Programs</h3>
+              <ul>
+                <a href="#" id="openModalBtn1"><li><span>Hall/Faculty Visits</span></li></a>
+                <a href="#" id="openModalBtn2"><li><span>Train-the-trainer</span></li></a>
+                <a href="#" id="openModalBtn3"><li><span>Design to Deliver</span></li></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span style="color: #CAB88A;">CHAC</span>
+          </a>
+          <p style="color: #CAB88A;">With animals, we learn to truly understand</p>
+          <div class="social-links d-flex mt-4">
+            <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i
+                class="bi bi-linkedin"></i></a>
+            <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4 style="color: #CAB88A;">Our Programmes</h4>
+          <ul>
+            <li><a href="AAA.html" style="color: #CAB88A;">General</a></li>
+            <li><a href="youth.html" style="color: #CAB88A;">For Youth</a></li>
+            <li><a href="seniors.html" style="color: #CAB88A;">For Seniors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4 style="color: #CAB88A;">Contact Us</h4>
+          <p style="color: #CAB88A;">
+            <strong>Phone:</strong> +65 8772 5464<br>
+            <strong>Email:</strong> hello@chacsg.com<br>
+          </p>
+        </div>
       </div>
     </div>
+  </footer><!-- End Footer -->
 
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h2>Train-the-trainer</h2>
-        <p>Our "Train-the-trainer" program equips youths to run sessions for their peers and other groups, including individuals with diverse abilities and seniors. The training covers both theory and practical application, preparing youth leaders to design and facilitate safe, meaningful activities with animals.</p>
-        <p><strong>Target Group:</strong> Student leaders, Student-led groups, Service learning or Volunteer Clubs.</p>
-        <p>Youths take part in a training session where they learn the basics of animal-assisted activities. They practice how to plan and lead safe, meaningful sessions for peers, individuals with diverse abilities, and seniors. With both theory and hands-on practice, they gain the skills to confidently run activities in their own groups or communities.</p>
-        <p><strong>Contact:</strong> hello@chacsg.com</p>
-      </div>
+  <!-- ======= Modals ======= -->
+  <!-- Modal 1: Hall/Faculty Visits -->
+  <div id="myModal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Hall/Faculty Visits</h2>
+      <p>Our faculty visits bring CHAC to schools, hospitals, and community centers to provide a unique and heartwarming experience for participants of all ages and abilities. These visits offer a refreshing break from routine and a chance for individuals to experience the joy and healing power that animals bring into our lives.</p>
+      <p>During these visits, we bring in our animals to offer joy, comfort, and companionship through casual interactions. With no structured format, these visits allow individuals to engage and bond with our animals in a relaxed and informal setting.</p>
+      <p><strong>Duration:</strong> 45 minutes (guinea pigs, rabbits, cats, dogs) to 90 minutes (dogs only).</p>
+      <p><strong>Contact:</strong> hello@chacsg.com</p>
     </div>
+  </div>
 
-    <!-- Modal 3 -->
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        <h2>Design to Deliver</h2>
-        <p>Our Design to Deliver program is created for youths. We either design customised sessions based on your goals, or guide students to design their own program, which we then help bring to life. This approach gives youth ownership of the learning while ensuring a meaningful and engaging experience.</p>
-        <p><strong>How it Works:</strong> First, we meet with your team to understand your objectives. Based on this, our facilitators create a customised plan, or support students in designing one themselves. Once the plan is ready, we deliver the sessions, combining both structured guidance and hands-on activities with animals.</p>
-        <p><strong>Duration:</strong> Sessions run 45 minutes when working with cats, guinea pigs, or rabbits, and up to 1.5 hours with dogs. Programs can also be extended into a series of workshops.</p>
-        <p><strong>Target Group:</strong> Youths, including school and community groups.</p>
-        <p><strong>Contact:</strong> hello@chacsg.com</p>
-      </div>
+  <!-- Modal 2: Train-the-trainer -->
+  <div id="myModal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Train-the-trainer</h2>
+      <p>Our "Train-the-trainer" program equips youths to run sessions for their peers and other groups, including individuals with diverse abilities and seniors. The training covers both theory and practical application, preparing youth leaders to design and facilitate safe, meaningful activities with animals.</p>
+      <p><strong>Target Group:</strong> Student leaders, Student-led groups, Service learning or Volunteer Clubs.</p>
+      <p>Youths take part in a training session where they learn the basics of animal-assisted activities. They practice how to plan and lead safe, meaningful sessions for peers, individuals with diverse abilities, and seniors. With both theory and hands-on practice, they gain the skills to confidently run activities in their own groups or communities.</p>
+      <p><strong>Contact:</strong> hello@chacsg.com</p>
     </div>
+  </div>
 
-  </main>
+  <!-- Modal 3: Design to Deliver -->
+  <div id="myModal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Design to Deliver</h2>
+      <p>Our Design to Deliver program is created for youths. We either design customised sessions based on your goals, or guide students to design their own program, which we then help bring to life. This approach gives youth ownership of the learning while ensuring a meaningful and engaging experience.</p>
+      <p><strong>How it Works:</strong> First, we meet with your team to understand your objectives. Based on this, our facilitators create a customised plan, or support students in designing one themselves. Once the plan is ready, we deliver the sessions, combining both structured guidance and hands-on activities with animals.</p>
+      <p><strong>Duration:</strong> Sessions run 45 minutes when working with cats, guinea pigs, or rabbits, and up to 1.5 hours with dogs. Programs can also be extended into a series of workshops.</p>
+      <p><strong>Target Group:</strong> Youths, including school and community groups.</p>
+      <p><strong>Contact:</strong> hello@chacsg.com</p>
+    </div>
+  </div>
 
-  <footer>
-    <p style="color: #CAB88A;">With animals, we learn to truly understand</p>
-    <p>Contact: hello@chacsg.com | +65 8772 5464</p>
-  </footer>
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
 
+  <!-- Tabs & Modal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.tab');
+      const sections = document.querySelectorAll('.section');
+      const modals = document.querySelectorAll('.modal');
+      const closes = document.querySelectorAll('.close');
+
+      // Tab navigation
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const target = this.getAttribute('data-target');
+          document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+          document.getElementById(target).classList.add('active');
+          tabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Modal triggers
+      document.getElementById('openModalBtn1').onclick = () => document.getElementById('myModal1').style.display = 'block';
+      document.getElementById('openModalBtn2').onclick = () => document.getElementById('myModal2').style.display = 'block';
+      document.getElementById('openModalBtn3').onclick = () => document.getElementById('myModal3').style.display = 'block';
+
+      // Modal close buttons
+      closes.forEach(close => {
+        close.onclick = function () {
+          modals.forEach(m => m.style.display = 'none');
+        }
+      });
+
+      // Close modals when clicking outside
+      window.onclick = function (event) {
+        modals.forEach(m => {
+          if (event.target == m) m.style.display = 'none';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-
