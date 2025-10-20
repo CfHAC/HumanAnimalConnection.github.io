@@ -5,13 +5,22 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Risks and rules</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Risks and Rules</title>
+  <meta property="og:image" content="assets/img/favicon.png" /> 
+  <meta name="description" content="Centre for Human Animal Connection (CHAC) tailors animal-assisted interventions (AAIs) for children, youths, and adults from...Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy">
+  <meta property="og:title" content="Centre for Human Animal Connection (CHAC): Equiping Workshops for children, youths and adults.. Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy"/> 
+  <meta name="og:description" content="Centre for Human Animal Connection (CHAC) tailors animal-assisted interventions (AAIs) for children, youths, and adults from...Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy"/> 
+  <meta property="og:image" content="Centre for Human Animal Connection (CHAC): Equiping Workshops for children, youths and adults. Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy" />
+
+
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,153 +44,153 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
 
-        .section {
-            display: none;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+    .section {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 
-        .section.active {
-            display: block;
-            opacity: 1;
-        }
+    .section.active {
+        display: block;
+        opacity: 1;
+    }
 
-        h2 {
-            margin-top: 0;
-            color: #333;
-        }
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
 
-        p {
-            line-height: 1.6;
-        }
+    p {
+        line-height: 1.6;
+    }
 
-        .benefit {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+    .benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 
-        .benefit i {
-            margin-right: 10px;
-            font-size: 20px;
-            color: #333;
-        }
+    .benefit i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #333;
+    }
 
-        .nav-tabs {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: left;
-            list-style-type: none;
-            padding: 0;
-        }
+    .nav-tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        list-style-type: none;
+        padding: 0;
+    }
 
-        .nav-tabs li {
-            margin-right: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            color: #333;
-            padding: 10px 15px;
-            border-radius: 8px;
-            background-color: #f5f5f5;
-            transition: background-color 0.3s;
-        }
+    .nav-tabs li {
+        margin-right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s;
+    }
 
-        .nav-tabs li.active {
-            color: #ffffff;
-            background-color: #CAB88A;
-        }
+    .nav-tabs li.active {
+        color: #ffffff;
+        background-color: #CAB88A;
+    }
 
-         .gallery {
-            --s: 150px; /* control the size */
-            --g: 10px;  /* control the gap */
-            display: grid;
-            margin: calc(var(--s) + var(--g));
-        }
+     .gallery {
+        --s: 150px; /* control the size */
+        --g: 10px;  /* control the gap */
+        display: grid;
+        margin: calc(var(--s) + var(--g));
+    }
 
-        .gallery > img {
-            grid-area: 1/1;
-            width: var(--s);
-            aspect-ratio: 1.15;
-            object-fit: cover;
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
-            transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
-            cursor: pointer;
-            filter: grayscale(80%);
-            transition: .2s linear;
-          }
-        .gallery > img:hover {
-          filter: grayscale(0);
-          z-index: 1;
-          --_t: 1.2;
-        }
+    .gallery > img {
+        grid-area: 1/1;
+        width: var(--s);
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+        transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: .2s linear;
+      }
+    .gallery > img:hover {
+      filter: grayscale(0);
+      z-index: 1;
+      --_t: 1.2;
+    }
 
-        .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
-        .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
-        .gallery > img:nth-child(3),
-        .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
-        .gallery > img:nth-child(4),
-        .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
-        .gallery > img:nth-child(3),
-        .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
-        .gallery > img:nth-child(5), 
-        .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
-    </style>
+    .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    .gallery > img:nth-child(4),
+    .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    .gallery > img:nth-child(3),
+    .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    .gallery > img:nth-child(5), 
+    .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+</style>
 </head>
 
 <body>
 
- <!-- ======= Header ======= -->
- <section id="topbar" class="topbar d-flex align-items-center">
-  <div class="container d-flex justify-content-center justify-content-md-between">
-    <div class="contact-info d-flex align-items-center">
-      <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a  style="color: #CAB88A;" href="mailto:hello@chac.com">hello@chac.com</a></i>
-      <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span  style="color: #CAB88A;">+65 8683 6572</span></i>
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i style="color: #CAB88A;" class="bi bi-envelope d-flex align-items-center"><a  style="color: #CAB88A;" href="mailto:hello@chacsg.com">hello@chacsg.com</a></i>
+        <i style="color: #CAB88A;" class="bi bi-phone d-flex align-items-center ms-4"><span  style="color: #CAB88A;">+65 8772 5464</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a  style="color: #CAB88A;" href="https://www.instagram.com/chac.sg/" class="instagram"><i class="bi bi-instagram"></i></i></a>
+      </div>
     </div>
-    <div class="social-links d-none d-md-flex align-items-center">
-      <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-      <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      <a  style="color: #CAB88A;" href="https://www.instagram.com/centreforhumananimalconnection/" class="instagram"><i class="bi bi-instagram"></i></i></a>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#about" onclick="scrollToSection()">About</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#services" onclick="scrollToSection()">Services</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#testimonials" onclick="scrollToSection()">Testimonials</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#team" onclick="scrollToSection()">Team</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#faq" onclick="scrollToSection()">FAQ</a></li>
+          <li><a  style="color: #CAB88A;" href="index.html#contact" onclick="scrollToSection()">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
     </div>
-  </div>
-</section><!-- End Top Bar -->
-
-<header id="header" class="header d-flex align-items-center">
-
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 style="color: #CAB88A;">CHAC<span style="color: #CAB88A;">.</span></h1>
-    </a>
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a style="color: #CAB88A;" href="index.html">Home</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#about" onclick="scrollToSection()">About</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#services" onclick="scrollToSection()">Services</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#testimonials" onclick="scrollToSection()">Testimonials</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#team" onclick="scrollToSection()">Team</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#faq" onclick="scrollToSection()">FAQ</a></li>
-        <li><a  style="color: #CAB88A;" href="index.html#contact" onclick="scrollToSection()">Contact</a></li>
-      </ul>
-    </nav><!-- .navbar -->
-
-    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-  </div>
 </header><!-- End Header -->
 <!-- End Header -->
 
@@ -307,7 +316,7 @@
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
             <a style="color: #CAB88A;" href="https://www.linkedin.com/company/centre-hac/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            <a style="color: #CAB88A;" href="https://www.instagram.com/centreforhumananimalconnection/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a style="color: #CAB88A;" href="https://www.instagram.com/chac.sg" class="instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
@@ -322,12 +331,13 @@
           </ul>
         </div> -->
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4 style="color: #CAB88A;">Our Services</h4>
+       <div class="col-lg-2 col-6 footer-links">
+          <h4 style="color: #CAB88A;">Our Programmes</h4>
           <ul>
-            <li><a href="AAE.html" style="color: #CAB88A;">Animal Assisted Education (AAE)</a></li>
-            <li><a href="AAP.html" style="color: #CAB88A;">Animal Assisted Psychotherapy (AAP)</a></li>
-            <li><a href="AAA.html" style="color: #CAB88A;">Animal Assisted Activities (AAA)</a></li>
+            <li><a href="AAA.html" style="color: #CAB88A;">General</a></li>
+            <li><a href="youth.html" style="color: #CAB88A;">For Youth</a></li>
+            <li><a href="seniors.html" style="color: #CAB88A;">For Seniors</a></li>
+
           </ul>
         </div>
 
@@ -335,8 +345,8 @@
           <h4 style="color: #CAB88A;">Contact Us</h4>
           <p style="color: #CAB88A;">
             
-            <strong>Phone:</strong> +65 8683 6572<br>
-            <strong>Email:</strong> hello@chac.com<br>
+            <strong>Phone:</strong> +65 8772 5464<br>
+            <strong>Email:</strong> hello@chacsg.com<br>
           </p>
 
         </div>
@@ -416,3 +426,4 @@
 </body>
 
 </html>
+
